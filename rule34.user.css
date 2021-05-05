@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Rule34
 @namespace      rule34.xxx
-@version        1.0.0
+@version        1.0.1
 @description    UserCSS for rule34.xxx
 @author         waitingmoon
 ==/UserStyle== */
@@ -9,11 +9,44 @@
 @-moz-document domain("rule34.xxx") {
     /* ヘッダー */
     div#header {
-        position: sticky;
-        top: 0;
-        z-index: 1;
+        margin-bottom: 24px;
     }
-    /* コンテンツ */
+    /* お気に入り */
+    span.thumb {
+        box-sizing: border-box;
+        display: inline-block;
+        width: calc(100% / 10 - 2.4px); /* 右側の余白を2.4px*10にする */
+        height: auto;
+        padding-left: 24px;
+        margin-bottom: 24px;
+    }
+    span.thumb a:nth-of-type(1) {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 0;
+        padding-top: 100%;
+    }
+    span.thumb a:nth-of-type(1) img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    span.thumb a:nth-of-type(2) {
+        display: block;
+        height: auto;
+        margin-top: 12px;
+    }
+    /* 投稿 */
+    div.content {
+        padding-left: 24px;
+    }
+    div#content {
+        padding: 0;
+    }
     div#post-list div.content {
         width: 100%;
     }
@@ -28,6 +61,7 @@
         float: none;
         width: calc(100% / 7 - 24px);
         height: auto;
+        padding: 0;
         margin-right: 24px;
         margin-bottom: 24px;
     }
@@ -47,7 +81,17 @@
         height: 100%;
         object-fit: cover;
     }
+    /* サイドバー */
+    div.sidebar {
+        width: 240px;
+        max-width: 240px;
+        margin: 0;
+    }
     /* 非表示 */
+    script + br,
+    span.thumb br {
+        display: none;
+    }
     div#post-list div.content > div:first-of-type span.blacklisted-image,
     div#post-list div.content > a[href*="r34-tan-webcamcover"],
     div#post-list div.content > br,
