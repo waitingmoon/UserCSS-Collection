@@ -48,24 +48,18 @@
         object-fit: cover;
     }
     /* 非表示 */
-    div#post-list div.content > a[href*="r34-tan-webcamcover"] {
-        display: none;
-    }
+    div#post-list div.content > div:first-of-type span.blacklisted-image,
+    div#post-list div.content > a[href*="r34-tan-webcamcover"],
     div#post-list div.content > br,
     div#post-view div.content > br {
         display: none;
     }
-    div#post-list div.content > div:first-of-type span.blacklisted-image {
-        display: none;
-    }
+    div#post-list div.sidebar img[src*="r34chibi.png"],
     div#post-list div.sidebarRight {
         display: none;
     }
     div.verticalFlexWithMargins,
     div.horizontalFlexWithMargins {
-        display: none;
-    }
-    div#post-list div.sidebar img[src*="r34chibi.png"] {
         display: none;
     }
 }
