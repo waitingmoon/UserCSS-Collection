@@ -1,0 +1,15 @@
+/* ==UserStyle==
+@name           Twitter
+@namespace      twitter.com
+@version        1.0.0
+@description    UserCSS for Twitter.com
+@author         waitingmoon
+==/UserStyle== */
+
+@-moz-document domain("twitter.com") {
+    /* トレンドとサイドバーを非表示 */
+    div[data-testid="sidebarColumn"],
+    div[aria-label="タイムライン: 話題を検索"] {
+        display: none;
+    }
+}

@@ -1,0 +1,11 @@
+/* ==UserStyle==
+@name           example
+@namespace      example.com
+@version        1.0.0
+@description    UserCSS for example.com
+@author         waitingmoon
+==/UserStyle== */
+
+@-moz-document domain("example.com") {
+    /* ここにコードを書く */
+}
