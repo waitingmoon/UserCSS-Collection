@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Rule34
 @namespace      rule34.xxx
-@version        1.0.2
+@version        1.0.3
 @description    UserCSS for rule34.xxx
 @author         waitingmoon
 ==/UserStyle== */
@@ -131,8 +131,6 @@
         display: inline-block !important;
     }
     div#post-list div#paginator input {
-        position: relative;
-        top: 1px;
         padding-right: 8px;
         padding-left: 8px;
         margin: 0 4px 4px 0;
