@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Rule34
 @namespace      rule34.xxx
-@version        1.0.4
+@version        1.0.5
 @description    UserCSS for rule34.xxx
 @author         waitingmoon
 ==/UserStyle== */
@@ -29,12 +29,37 @@
     }
     hr {
         height: 1px;
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: var(--c-bg-highlight);
         border: 0;
+    }
+    table td {
+        padding: 4px 8px;
+    }
+    table.highlightable td {
+        border-color: var(--c-bg-highlight);
+        border-style: solid;
     }
     /* ヘッダー */
     div#header {
         margin-bottom: 24px;
+    }
+    div#header #site-title {
+        padding: 8px 24px;
+    }
+    div#header ul#navbar {
+        padding: 0 16px;
+    }
+    div#header ul#navbar li {
+        display: inline-block;
+        padding: 4px 8px;
+    }
+    div#header ul#subnavbar {
+        padding: 0 16px;
+    }
+    div#header ul#subnavbar li {
+        display: inline-block;
+        padding: 8px;
+        margin: 0;
     }
     /* お気に入り */
     span.thumb {
@@ -107,15 +132,21 @@
     div#post-list div.content > div:first-of-type span.thumb a img[style*="border: 3px"] {
         border: 0 !important;
     }
+    div.status-notice {
+        margin: 0 0 24px 0;
+    }
+    h4.image-sublinks {
+        margin-top: 24px;
+    }
     /* コメント */
     div#post-comments {
         margin-top: 24px;
     }
     div#post-comments div#comment-list > div {
-        margin: 0 0 24px 0;
+        margin: 0 0 16px 0;
     }
     div#post-comments div#comment-list > div > hr {
-        margin: 24px 0;
+        margin: 16px 0;
     }
     /* サイドバー */
     div.sidebar {
@@ -137,13 +168,20 @@
         flex: 1;
         margin-left: 12px;
         content: "";
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid var(--c-bg-highlight);
     }
     div.sidebar > div > h5 {
         padding: 0 24px;
     }
-    div.sidebar > div > ul:not([class]) {
+    div.sidebar > div > ul {
         padding: 0 24px;
+    }
+    div.sidebar > div > ul > li {
+        padding: 4px 24px;
+        margin: 0 -24px;
+    }
+    div.sidebar > div > ul > li:hover {
+        background-color: var(--c-bg);
     }
     div.sidebar div.tag-search {
         padding: 0 24px;
@@ -186,9 +224,14 @@
     }
     div.sidebar ul#tag-sidebar li {
         padding: 4px 24px;
+        margin: 0;
     }
     div.sidebar ul#tag-sidebar li[class*="tag-type"]:hover {
         background-color: var(--c-bg);
+    }
+    div.sidebar ul#tag-sidebar li:not([class]),
+    div.sidebar ul#tag-sidebar + div > ul > li:hover {
+        background-color: inherit;
     }
     /* ページ送り */
     div#paginator {
@@ -227,6 +270,10 @@
     div#paginator input:nth-child(2) {
         margin-right: 0;
         cursor: pointer;
+    }
+    /* フッター */
+    div#footer {
+        margin: 0 auto 24px;
     }
     /* 非表示 */
     script + br,
