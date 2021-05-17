@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Rule34
 @namespace      rule34.xxx
-@version        1.0.5
+@version        1.0.6
 @description    UserCSS for rule34.xxx
 @author         waitingmoon
 ==/UserStyle== */
@@ -193,7 +193,8 @@
         display: block;
     }
     div.sidebar div.tag-search > form > div {
-        position: relative;
+        display: flex;
+        flex-direction: row;
     }
     div.sidebar div.tag-search input[name="tags"] {
         box-sizing: border-box;
@@ -207,9 +208,6 @@
         outline: 0;
     }
     div.sidebar div.tag-search input[name="commit"] {
-        position: absolute;
-        top: 0;
-        right: 0;
         width: auto !important;
         padding: 8px 12px;
         margin-top: 0 !important;
